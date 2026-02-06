@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/VirtualJoystick.gd" id="1"]
+
+[node name="VirtualJoystick" type="Control"]
+script = ExtResource("1")
+anchor_right = 0.0
+anchor_bottom = 0.0
+size = Vector2(160, 160)
+
+[node name="Base" type="ColorRect" parent="."]
+color = Color(0, 0, 0, 0.3)
+size = Vector2(160, 160)
+
+[node name="Knob" type="ColorRect" parent="."]
+color = Color(1, 1, 1, 0.6)
+size = Vector2(80, 80)
+position = Vector2(40, 40)

@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/Game.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/GasVisualizer.gd" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/VirtualJoystick.tscn" id="3"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="Units" type="Node2D" parent="."]
+
+[node name="Projectiles" type="Node2D" parent="."]
+
+[node name="GasVisualizer" type="Node2D" parent="."]
+script = ExtResource("2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 0)
+zoom = Vector2(0.9, 0.9)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TopBar" type="Control" parent="CanvasLayer/UI"]
+anchor_right = 1.0
+anchor_bottom = 0.0
+size_flags_horizontal = 3
+
+[node name="CountLabel" type="Label" parent="CanvasLayer/UI/TopBar"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.5
+anchor_bottom = 0.0
+position = Vector2(20, 20)
+text = "ALLY: 3  ENEMY: 3"
+
+[node name="TimeLabel" type="Label" parent="CanvasLayer/UI/TopBar"]
+anchor_left = 0.5
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+position = Vector2(-150, 20)
+text = "TIME: 60.0"
+
+[node name="VirtualJoystick" parent="CanvasLayer/UI" instance=ExtResource("3")]
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+position = Vector2(40, -200)
+
+[node name="SkillButton" type="Button" parent="CanvasLayer/UI"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+position = Vector2(-180, -180)
+size = Vector2(140, 140)
+text = "SKILL"
