@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/Title.gd" id="1"]
+
+[node name="Title" type="Control"]
+script = ExtResource("1")
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Center" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBox" type="VBoxContainer" parent="Center"]
+
+[node name="Label" type="Label" parent="Center/VBox"]
+text = "3v3 BRAWL PROTOTYPE"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="Center/VBox"]
+text = "START"
+
+[connection signal="pressed" from="Center/VBox/StartButton" to="." method="_on_start_pressed"]

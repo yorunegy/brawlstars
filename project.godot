@@ -1,0 +1,29 @@
+; Engine configuration file.
+; It's best edited using the editor.
+
+config_version=5
+
+[application]
+config/name="BrawlStarsPrototype"
+run/main_scene="res://scenes/Title.tscn"
+config/features=PackedStringArray("4.2")
+
+[autoload]
+GameState="*res://scripts/GameState.gd"
+
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/size/resizable=true
+
+[input]
+move_up={"deadzone":0.5,"events":[{"type":"key","device":0,"keycode":87},{"type":"key","device":0,"keycode":16777232}]}
+move_down={"deadzone":0.5,"events":[{"type":"key","device":0,"keycode":83},{"type":"key","device":0,"keycode":16777234}]}
+move_left={"deadzone":0.5,"events":[{"type":"key","device":0,"keycode":65},{"type":"key","device":0,"keycode":16777231}]}
+move_right={"deadzone":0.5,"events":[{"type":"key","device":0,"keycode":68},{"type":"key","device":0,"keycode":16777233}]}
+skill={"deadzone":0.5,"events":[{"type":"key","device":0,"keycode":32}]}
+
+[physics]
+2d/default_gravity=0
