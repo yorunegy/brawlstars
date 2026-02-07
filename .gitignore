@@ -1,0 +1,14 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Import cache (Godot generates *.import files)
+*.import
+
+# Mono / C# (使うなら)
+.mono/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
